@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,108 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Skullibrista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="street" translatesAutoresizingMaskIntoConstraints="NO" id="4sE-Le-XTJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player0" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-U9-QwD">
+                                <rect key="frame" x="126.66666666666669" y="286" width="140" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hhv-U9-QwD" secondAttribute="height" multiplier="1:2" id="RKa-1a-A4V"/>
+                                    <constraint firstAttribute="width" constant="140" id="YNY-Dh-Ljy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-Vb-KuY">
+                                <rect key="frame" x="0.0" y="79" width="393" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ffu-Vb-KuY" secondAttribute="height" multiplier="1029:228" id="zyT-ZE-Dek"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você precisa se equilibrar girando o celular. Se a caveira sair da área delimitada é GAME OVER!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPi-2F-kAI">
+                                <rect key="frame" x="36" y="79" width="321" height="114.66666666666669"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QJ-4V-Oea">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameOver" translatesAutoresizingMaskIntoConstraints="NO" id="5el-eu-jhQ">
+                                        <rect key="frame" x="96.666666666666686" y="28" width="200" height="148.66666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5el-eu-jhQ" secondAttribute="height" multiplier="452:336" id="MiX-oX-oof"/>
+                                            <constraint firstAttribute="width" constant="200" id="iS7-PU-DTl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQT-YO-Odt">
+                                        <rect key="frame" x="39.666666666666657" y="525" width="314" height="43"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="playAgain"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rk9-ER-5b7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você jogou durante X segundos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-e6-qtZ">
+                                        <rect key="frame" x="70.666666666666686" y="474.66666666666663" width="252" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.99971824880000004" green="1" blue="0.8366492391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aQT-YO-Odt" firstAttribute="top" secondItem="dFi-e6-qtZ" secondAttribute="bottom" constant="30" id="9xV-Sy-BC2"/>
+                                    <constraint firstItem="5el-eu-jhQ" firstAttribute="top" secondItem="8QJ-4V-Oea" secondAttribute="top" constant="28" id="Gcq-82-faG"/>
+                                    <constraint firstItem="aQT-YO-Odt" firstAttribute="centerY" secondItem="8QJ-4V-Oea" secondAttribute="centerY" constant="150" id="TJv-HT-ZBd"/>
+                                    <constraint firstItem="5el-eu-jhQ" firstAttribute="centerX" secondItem="8QJ-4V-Oea" secondAttribute="centerX" id="XTx-Xj-cgg"/>
+                                    <constraint firstItem="dFi-e6-qtZ" firstAttribute="centerX" secondItem="8QJ-4V-Oea" secondAttribute="centerX" id="chp-wf-PPZ"/>
+                                    <constraint firstItem="aQT-YO-Odt" firstAttribute="centerX" secondItem="8QJ-4V-Oea" secondAttribute="centerX" id="evA-9q-OUg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.95686274509803915" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ffu-Vb-KuY" secondAttribute="trailing" id="354-nN-Eqi"/>
+                            <constraint firstItem="8QJ-4V-Oea" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Ch-E2-AFA"/>
+                            <constraint firstItem="hhv-U9-QwD" firstAttribute="centerX" secondItem="4sE-Le-XTJ" secondAttribute="centerX" id="5Nz-iz-fra"/>
+                            <constraint firstItem="ffu-Vb-KuY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5sf-Qd-seF"/>
+                            <constraint firstAttribute="trailing" secondItem="4sE-Le-XTJ" secondAttribute="trailing" id="Dvd-cw-yUK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uPi-2F-kAI" secondAttribute="trailing" constant="36" id="FHq-NZ-yzX"/>
+                            <constraint firstItem="4sE-Le-XTJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I7r-Xz-PDX"/>
+                            <constraint firstItem="4sE-Le-XTJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VWn-Kf-h6T"/>
+                            <constraint firstItem="ffu-Vb-KuY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d9m-sm-DVi"/>
+                            <constraint firstItem="uPi-2F-kAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="hpq-1f-wXT"/>
+                            <constraint firstAttribute="bottom" secondItem="4sE-Le-XTJ" secondAttribute="bottom" id="kr8-hC-3L5"/>
+                            <constraint firstItem="uPi-2F-kAI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nyy-BF-xH4"/>
+                            <constraint firstItem="hhv-U9-QwD" firstAttribute="centerY" secondItem="4sE-Le-XTJ" secondAttribute="centerY" id="poE-6h-acl"/>
+                            <constraint firstAttribute="trailing" secondItem="8QJ-4V-Oea" secondAttribute="trailing" id="x1D-Qb-fg8"/>
+                            <constraint firstItem="8QJ-4V-Oea" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xHn-of-vd7"/>
+                            <constraint firstAttribute="bottom" secondItem="8QJ-4V-Oea" secondAttribute="bottom" id="y64-Pf-1pi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbInstructions" destination="uPi-2F-kAI" id="py1-W3-ao0"/>
+                        <outlet property="lbTimePlayed" destination="dFi-e6-qtZ" id="Twn-Fw-hFb"/>
+                        <outlet property="player" destination="hhv-U9-QwD" id="7Av-pv-G7O"/>
+                        <outlet property="street" destination="4sE-Le-XTJ" id="3lq-ee-6IP"/>
+                        <outlet property="vGameOver" destination="8QJ-4V-Oea" id="Ojm-6D-Ir0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gameOver" width="226" height="168"/>
+        <image name="playAgain" width="290" height="29"/>
+        <image name="player0" width="588" height="1176"/>
+        <image name="street" width="1400" height="2800"/>
+        <image name="sun" width="1029" height="228"/>
+    </resources>
 </document>
